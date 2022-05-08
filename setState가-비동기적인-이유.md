@@ -65,9 +65,16 @@ console.log(this.props.value) // 0
 - 결국 이 모든 것은 setState 가 비동기적이기 때문에 가능합니다. 모든 업데이트가 독립적이라면 , 위에서 말했듯 “이전 화면” 이 보이고, 상호작용이 가능한 상태에서 “새로운 화면”을 백그라운드에서 렌더링 할 수 있는 방법이 없습니다.
 
 
+## React 18 부터 배치처리
+- 모든 업데이트가 기본적으로 배치 처리 됩니다.
+- 서로 다른 이벤트들은 절대로 배치처리 되지 않습니다.
+   - 예를 들어 서로 다른 버튼에 대한 click 이벤트는 배치처리 되지 않습니다. 
+
+
 # 참고자료
 
 [react-guide/props-vs-state.md at master · uberVU/react-guide · GitHub](https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
 
 [RFClarification: why is `setState` asynchronous? · Issue #11527 · Facebook/react · GitHub](https://github.com/facebook/react/issues/11527#issuecomment-360199710)
 
+https://stackoverflow.com/questions/48563650/does-react-keep-the-order-for-state-updates/48610973#48610973
